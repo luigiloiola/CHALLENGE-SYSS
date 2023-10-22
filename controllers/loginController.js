@@ -13,7 +13,7 @@ exports.login =  async (req, res) => {
       const user = { username };
       const accessToken = jwt.sign(user, process.env.JWT_SECRET);
       res.cookie('token', accessToken, { httpOnly: true });
-      res.json({ accessToken });
+      res.json({ message:'logged in successfully' });
     } else {
       res.status(401).json({ message: 'Invalid username or password' });
     }
