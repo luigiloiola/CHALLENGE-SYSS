@@ -1,12 +1,7 @@
 authenticate user by sending the following request:
 
-curl -X POST \
-  http://localhost:8000/login \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "username": "your_username",
-    "password": "your_password"
-  }'
+curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"password\"}" http://localhost:8000/login
+
 
   then follow as instructed by the challenge guide
 
