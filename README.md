@@ -1,6 +1,14 @@
-execute um chamado POST localhost8000/login {"username":"admin", "password":"password"},
+authenticate user by sending the following request:
 
-e então seguir orientações de request segundo arquivo de instruções
+curl -X POST \
+  http://localhost:8000/login \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username": "your_username",
+    "password": "your_password"
+  }'
+
+  then follow as instructed by the challenge guide
 
 docker images:
 luigiloiola/mongo
