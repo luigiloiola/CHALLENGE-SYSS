@@ -23,9 +23,9 @@ const sampleUser = {
   password:'password'
 };
 
-// Middleware to check JWT for authentication
+
 const authenticateToken = (req, res, next) => {
-  const token = req.cookies.token; // assuming the token is in a cookie named 'token'
+  const token = req.cookies.token; 
 
   if (!token) {
     return res.status(401).json({ message: 'Unauthorized' });
@@ -48,7 +48,6 @@ app.use('/reports/employees', authenticateToken, require('./routes/reportRoutes'
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
-  // Check username and hashed password (this is a simplistic example)
   if (username === sampleUser.username && password ===sampleUser.password) {
     const user = { username };
     const accessToken = jwt.sign(user, process.env.JWT_SECRET);
