@@ -6,5 +6,5 @@ curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"admin\", \
   then follow as instructed by the challenge guide
 
 docker images:
-luigiloiola/mongo
+luigiloiola/mongo,
 luigiloiola/node
